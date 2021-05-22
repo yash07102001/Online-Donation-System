@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Home</h1>
+<!--Checking for user is logged in or not -->
+{% if user.is_authenticated %}
+<h1>Hello, {{user.first_name}}</h1><br>
+
+<!--Printing data from FundCollector class-->
+<h2>Fund Collector</h2>
+Name : {{FC1.name}}<br>
+Reason : {{FC1.reason}}<br>
+Amount : {{FC1.amount}}<br>
+<!--                               -->
+
+<br>
+<a href="registration/logout">Logout</a>
+{% else %}
+<a href="registration/register">Sign up</a><br>
+<a href="registration/login">Login</a>
+{% endif %}
+</body>
+</html>

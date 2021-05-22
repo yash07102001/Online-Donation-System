@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {%load static%}
+     <link rel="stylesheet"  href="{%static  'registration/css/style.css'  %}">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Signup</title>
+</head>
+<body>
+
+
+    <div class="Box">
+        <p class="fHeading" align="center">Sign Up</p>
+        <form action="register" method="post">{%csrf_token%}
+            <input type="text" class="un " align="center" name="first_name" placeholder="First Name"><br>
+            <input type="text" class="un " name="last_name" align="center" placeholder="Last Name"><br>
+            <input type="text" class="un " name="username" align="center" placeholder="User Name"><br>
+            <input type="email" class="un " name="email" align="center" placeholder="Email"><br>
+            <input type="password" class="pass" name="password1" align="center" placeholder="Password"><br>
+            <input type="password" class="pass" name="password2" align="center" placeholder="Confirm Password"><br>
+            <input type="submit" value="Signup" class="submit">
+        </form>
+        <br>
+        <a href="login" class="centre">Already Have an Account </a>
+    </div>
+</body>
+</html>

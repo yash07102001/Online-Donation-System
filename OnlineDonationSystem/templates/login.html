@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet"  href="{%static  'registration/css/stylelogin.css'  %}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+    <div class="Box">
+        <p class="fHeading" align="center">Login</p>
+        <form class="form1" action="login" method="post">{% csrf_token %}
+            <input class="un " type="text" align="center" placeholder="Username" name="username">
+            <input class="pass" type="password" align="center" placeholder="Password" name="password">
+            <input type="submit" value="login" class="submit"/>
+        </form>
+        <br>
+        <a href="register" id="createAcc">Create New Account</a>
+    </div>
+<div>
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {%endfor%}
+</div>
+
+</body>
+</html>
