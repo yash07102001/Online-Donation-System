@@ -12,9 +12,13 @@
 
 <!--Printing data from FundCollector class-->
 <h2>Fund Collector</h2>
-Name : {{FC1.name}}<br>
-Reason : {{FC1.reason}}<br>
-Amount : {{FC1.amount}}<br>
+{% for fcs in FC %}
+Name : {{fcs.name}}<br>
+Reason : {{fcs.reason}}<br>
+Amount : {{fcs.amount}}<br>
+<hr>
+{% endfor %}
+
 <!--                               -->
 
 <br>
