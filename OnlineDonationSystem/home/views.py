@@ -10,4 +10,16 @@ def home(request):
     # FC1.amount=50000
     # FC1.reason='Covid 19'
 
-    return render(request, 'home.html', {'FC': FC})
+    return render(request, 'index.html', {'FC': FC})
+
+def about(request):
+    return render(request,'about.html')
+
+def contact(request):
+    return render(request,'contact.html')
+
+def donate(request):
+    return render(request,'donate.html')
+
+def mydonation(request):
+    pass    #return render(request,'mydonation.html')

@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% load static %}
+
+<link rel="stylesheet" href="{%static  'home/css/bootstrap.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/button.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/owl.theme.default.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/owl.carousel.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/animate.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/flaticon.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/font-awesome.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/imagelightbox.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/meanmenu.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/odometer.min.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/style.css'  %}">
+
+<link rel="stylesheet" href="{%static  'home/css/responsive.css'  %}">
+
+<link rel="icon" type="image/png" href="{%static  'home/img/favicon.png'  %}">
+
+<title>Helping hand - Charity & Donations</title>
+</head>
+<body>
+
+<div class="preloader">
+<div class="spinner">
+<div class="double-bounce1"></div>
+<div class="double-bounce2"></div>
+</div>
+</div>
+
+
+<div class="nivo-header-style-one fixed-top">
+<div class="header-wrap">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-6">
+<ul class="header-information ">
+
+<li>
+<p style="color:#ffffff">
+<i class="fa fa-phone"></i>
++91-9876543210</p>
+</li>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<li>
+<p style="color:#ffffff">
+<i class="fa fa-envelope"></i>
+helpinghands@gmail.com</p>
+</li>
+
+</ul>
+</div>
+<div class="col-lg-6 col-md-6">
+<ul class="social-icon">
+<li>
+Follow Us:
+</li>
+<li>
+<a href="#">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-instagram"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<section class="top">
+<div class="navbar-area">
+
+<div class="mobile-nav">
+<a href="index.html" class="logo">
+<img src="{%static  'home/img/nivo-logo.png'  %}" alt="Nivo Logo">
+</a>
+</div>
+
+<div class="nivo-nav-one">
+<div class="main-nav">
+<nav class="navbar navbar-expand-md navbar-light">
+<div class="container">
+<a class="navbar-brand" href="index.html">
+<img src="{%static  'home/img/helping-hands.png'  %}" alt="Helping-Hands Logo">
+</a>
+<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+<ul class="navbar-nav m-auto">
+<li class="nav-item">
+<a href="index.html" class="nav-link">Home</a>
+</li>
+<li class="nav-item">
+<a href="about" class="nav-link">About</a>
+</li>
+<li class="nav-item">
+<a href="#storyarea" class="nav-link">Stories</a>
+</li>
+<!--<li class="nav-item">-->
+<!--<a href="#donatearea" class="nav-link">Donate us</a>-->
+<!--</li>-->
+<li class="nav-item">
+<a href="#teamarea" class="nav-link">Team</a>
+</li>
+<li class="nav-item">
+<a href="contact" class="nav-link">Contact us</a>
+</li>
+
+ {% if user.is_authenticated  %}
+ <li class="nav-item">
+<a href="mydonation" class="nav-link">My Donations</a>
+</li>
+ <li class="nav-item">
+<a href="registration/logout" class="donate" >Logout</a>
+  </li>
+ {% else %}
+<li class="nav-item">
+<a href="registration/login" class="nav-link">Login</a>
+</li>
+ {% endif %}
+</ul>
+<div class="others-option">
+<a href="#donatearea" class="donate">Donate Now</a>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="banner-area">
+<div class="container">
+<div class="banner-wrap">
+<div class="row align-items-center m-0">
+<div class="col-lg-6 p-0">
+<div class="banner-text">
+ {% if user.is_authenticated  %}
+<span><h2 style="color:#fa185c;">Welcome {{user.first_name}}</h2></span>
+ {% endif %}
+<h1>We Encourage Participating in Charity!</h1>
+<p>Engaging in a charity can give you a good feeling! Your contribution can make you more complete. Millions of
+children need your support.</p>
+ {% if user.is_authenticated  %}
+ {% else %}
+ <a class="default-btn" href="registration/register">Join with us</a>
+ {% endif %}
+</div>
+</div>
+<div class="col-lg-6 p-0">
+<div class="banner-img">
+<img src="{%static  'home/img/banner-img.png'  %}" alt="banner">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=" shape shape-1">
+<img src="{%static  'home/img/shape/1.png'  %}" alt="Shape">
+</div>
+<div class=" shape shape-2">
+<img src="{%static  'home/img/shape/2.png'  %}" alt="Shape">
+</div>
+<div class=" shape shape-3">
+<img src="{%static  'home/img/shape/3.png'  %}" alt="Shape">
+</div>
+<div class=" shape shape-4">
+<img src="{%static  'home/img/shape/4.png'  %}" alt="Shape">
+</div>
+<div class=" shape shape-5">
+<img src="{%static  'home/img/shape/5.png'  %}" alt="Shape">
+</div>
+</section>
+
+
+<section class="good-causes-area ptb-100-70">
+<div class="container">
+<div class="section-title">
+<span>Good Causes</span>
+<h2>Help the Poor Through Us</h2>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="single-good-causes">
+<i class="flaticon-customer"></i>
+<h3>Covid Relief</h3>
+<p>We must act immediately to take on more severe wave of COVID-19
+Your support is vital!</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="single-good-causes">
+<i class="flaticon-family"></i>
+<h3>Helping Hand</h3>
+<p>We must help a poor families who don't have fund to cure their disease. </p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="single-good-causes">
+<i class="flaticon-coin"></i>
+<h3>Aid For Children</h3>
+<p>We work hard to ensure that no child sleeps without a roof above their head.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class=" shape shape-1">
+<img src="{%static  'home/img/shape/1.png'  %}" alt="Shape">
+</div>
+<div class=" shape shape-2">
+<img src="{%static  'home/img/shape/2.png'  %}" alt="Shape">
+</div>
+<div class=" shape shape-3">
+<img src="{%static  'home/img/shape/3.png'  %}" alt="Shape">
+</div>
+<div class=" shape shape-5">
+<img src="{%static  'home/img/shape/5.png'  %}" alt="Shape">
+</div>
+</section>
+
+
+<!--<section class="about-area">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<div class="about-img">
+<img src="{%static  'home/img/about-img.jpg'  %}" alt="About">
+</div>
+</div>
+<div class="col-lg-6">
+<div class="about-text ptb-100">
+<span>About Us</span>
+<h2>A Dream in their Mind is Our Mission</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply.</p>
+<ul>
+<li>
+<i class="flaticon-check-mark"></i>
+Become Volunteer
+</li>
+<li>
+<i class="flaticon-check-mark"></i>
+Quick Fundraise
+</li>
+<li>
+<i class="flaticon-check-mark"></i>
+Give Donation
+</li>
+<li>
+<i class="flaticon-check-mark"></i>
+Join Event
+</li>
+</ul>
+<a class="default-btn" href="about.html">More Details</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+-->
+
+<div id="donatearea">
+<section class="active-campaing-area pt-100">
+<div class="container">
+<div class="section-title">
+<h2 style="color:#fa185c;text-shadow:1px 1px 1px black;font-size:4em">Ongoing Donation Activities</h2>
+<span>Some Good Causes</span>
+<p>Below there are some Donation Activities going on.<br>You can Donate by clicking Donate now button below.</p>
+</div>
+<div class="campaing-wrap owl-carousel owl-theme">
+
+ {%for fcs in FC %}
+<div class="single-campaing">
+<div class="campaing-img">
+  <img src="media/{{fcs.img}}" alt="Shape">
+<!--<img src="{%static  'home/img/campaing/1.jpg'  %}" alt="">-->
+</div>
+
+<div class="campaing-text">
+<div class="progress pink">
+<div class="progress-bar">
+<div class="progress-value" style="width: 50%;">50%</div>
+</div>
+</div>
+
+<ul>
+<li><span>Raised:</span> ₹5000.00</li>
+<li class="left-site"><span>Goal:</span> ₹{{fcs.amount}}</li>
+</ul>
+
+<h3>{{fcs.reason}}</h3>
+<p>{{fcs.description}}</p>
+
+<div class="donatebtn">
+<a href="donate">Donate Now</a>
+</div>
+</div>
+</div>
+{% endfor %}
+ <!--
+<div class="single-campaing">
+<div class="campaing-img">
+<img src="{%static  'home/img/campaing/2.jpg'  %}" alt="">
+</div>
+<div class="campaing-text">
+<div class="progress pink">
+<div class="progress-bar">
+<div class="progress-value" style="width: 50%;">50%</div>
+</div>
+</div>
+<ul>
+<li><span>Raised:</span> $5000.00</li>
+<li class="left-site"><span>Goal:</span> $8000.00</li>
+</ul>
+<h3>School For Poor Children</h3>
+<p>Value-Based & Child-Centric Education. Sponsor A Girl For Her Education.</p>
+<div class="donatebtn">
+<a href="donate">Donate Now</a>
+</div>
+</div>
+</div>
+
+<div class="single-campaing">
+<div class="campaing-img">
+<img src="{%static  'home/img/campaing/4.jpg'  %}" alt="">
+</div>
+<div class="campaing-text">
+<div class="progress pink">
+<div class="progress-bar">
+<div class="progress-value" style="width: 50%;">50%</div>
+</div>
+</div>
+<ul>
+<li><span>Raised:</span> $5000.00</li>
+<li class="left-site"><span>Goal:</span> $8000.00</li>
+</ul>
+<h3>Old Age home care</h3>
+<p>Helping Old age Humans to stay at Old age Home in their bad time.</p>
+<div class="donatebtn">
+<a href="donate">Donate Now</a>
+</div>
+</div>
+</div>
+-->
+</div>
+</div>
+<div class=" shape shape-1">
+
+<img src="{%static  'home/img/shape/1.png'  %}" alt="Shape">
+</div>
+</section>
+</div>
+
+
+<!--<section class="help-area">
+<div class="container">
+<div class="help-title">
+<h2>Some Good Causes</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+<a class="default-btn" href="donate.html">Donate Now</a>
+<a class="default-btn join" href="#">Join Now</a>
+</div>
+</div>
+</section>
+-->
+
+<section class="get-started-today-area ptb-100">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<div class="get-started-img">
+<img src="{%static  'home/img/get-started/get-started.png'  %}" alt="Donation">
+</div>
+</div>
+<div class="col-lg-6">
+<div class="get-started-title">
+<span>Get Started Today</span>
+<h2>Our Fundraise Plans</h2>
+<p>Our goal is to raise a fund from each and every person whether rich or poor.<br>Minimum Donation amount is 1 INR so that each person can Donate.</p>
+</div>
+<div class="get-started-list">
+<img src="{%static  'home/img/get-started/1.png'  %}" alt="Started">
+<h3>Education For Children</h3>
+<p>Value-Based & Child-Centric Education. Sponsor A Human For Her Education.</p>
+</div>
+<div class="get-started-list">
+<img src="{%static  'home/img/get-started/2.png'  %}" alt="Started">
+<h3>Home For Homeless People</h3>
+<p>Helping Homeless People to stay in their bad time.</p>
+</div>
+<div class="get-started-list">
+<img src="{%static  'home/img/get-started/3.png'  %}" alt="Started">
+<h3>Free Medical Services</h3>
+<p>To help infected person you can donate to this relief fund.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--<section class="organaization-area ptb-100">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-7">
+<div class="organaization-text">
+<h2>Small Growing charity organaization wants to raise money</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simple dummy text of the printing and typesetting industry.</p>
+<a class="default-btn" href="donate.html">
+How To Donate
+</a>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="organaization">
+<img src="{%static  'home/img/organaization.png'  %}" alt="Organaization">
+</div>
+</div>
+</div>
+</div>
+</section>
+-->
+
+<div id="teamarea">
+<section class="testimonial-area">
+<div class="container">
+<div class="section-title">
+<span>Our Team</span>
+<h2>Their Thoughts About Our Work</h2>
+<p>We are working as Non Profit Organization to do charity work for helping needy person's in their bad time.<br>Our goal is to raise a fund from each and every person whether rich or poor.Minimum Donation amount is 1 INR.</p>
+</div>
+<div class="row">
+<div class="testimonial-wrap owl-carousel owl-theme">
+<div class="single-testimonial">
+<img src="{% static  'home/img/testimonial/1.jpg'  %}" alt="Testimonial">
+<h3>Yash Tiwari</h3>
+<i class="flaticon-left-quote"></i>
+<p>Senior Web Designer at Dharmsinh Desai University. Working Hard to make a clean and Responsive Website.</p>
+</div>
+<div class="single-testimonial">
+<img src="{%static  'home/img/testimonial/2.jpg'  %}" alt="Testimonial">
+<h3>Priyank Akbari</h3>
+<i class="flaticon-left-quote"></i>
+<p>Senior Web Designer at Dharmsinh Desai University. Working Hard to make a clean and Responsive Website.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="shape shape-8">
+<img src="{% static  'home/img/shape/8.png'  %}" alt="Shape">
+</div>
+</section>
+</div>
+
+<div id="storyarea">
+<section class="latest-news-area">
+<div class="container">
+<div class="section-title">
+<h2>Some of The Success Stories</h2>
+<p>Here comes some success stories that helped need person via our Website and charity Service.</p>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="single-news">
+<div class="news-img">
+<a href="blog-details.html">
+<img src="{%static  'home/img/news/1.jpg'  %}" alt="News">
+</a>
+<div class="date">
+<span>1 November</span>
+</div>
+</div>
+<div class="news-text">
+<ul>
+<li>
+<i class="flaticon-man-user"></i>
+By
+<a href="#">Admin</a>
+</li>
+
+</ul>
+<h3>
+<a href="blog-details.html">Highlight of the fundraisings</a>
+</h3>
+<p>We helped almost 5000 needy persons as well as 150 families in their bad times via our charity service.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="single-news">
+<div class="news-img">
+<a href="blog-details.html">
+<img src="{%static  'home/img/news/2.jpg'  %}" alt="News">
+</a>
+<div class="date">
+<span>2 November</span>
+</div>
+</div>
+<div class="news-text">
+<ul>
+<li>
+<i class="flaticon-man-user"></i>
+By
+<a href="#">Admin</a>
+</li>
+
+</ul>
+<h3>
+<a href="blog-details.html">
+A place start a new life with peace
+</a>
+</h3>
+<p>Because of Our charity services and your Donations these Orphans is staying, Living and Learning a Peaceful way.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+<div class="single-news">
+<div class="news-img">
+<a href="blog-details.html">
+<img src="{%static  'home/img/news/3.jpg'  %}" alt="News">
+</a>
+<div class="date">
+<span>3 November</span>
+</div>
+</div>
+<div class="news-text">
+<ul>
+<li>
+<i class="flaticon-man-user"></i>
+By
+<a href="#">Admin</a>
+</li>
+
+</ul>
+<h3>
+<a href="blog-details.html">Build a school for poor children</a>
+</h3>
+<p>These children's are now studying for free due to Your Donations and our charity services.This is helping Gov. Digital India Project.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<section class="footer-top-area ptb-100-70">
+<div class="container">
+<div class="section-title">
+<h1 style = "color:#ffffff">Helping Hands</h1></nr></br></br>
+<div class="row">
+<div class="col-lg-6 col-sm-6 col-md-6" >
+<div class="single-widget">
+<div style = "width : auto; height: auto; background-color:#ffffff;">
+<a href="index.html">
+<img src="{%static  'home/img/helping-hands.png'  %}" alt="">
+ </a>
+ </div><br>
+<p> Helping Hands is a charity service to help needy Humans and their families in their bad time by providing simple interface for Donations.</p>
+<ul class="social-icon">
+<li>
+<a href="#">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-pinterest-p"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!--<div class="col-lg-2 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<h3>Fundraised More</h3>-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="#">Medical</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Memorial</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Emergency</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Education</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Charity</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Organization</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-2 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<h3>Resources</h3>-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="#">Help Center</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Blog</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Press Center</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Careers</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">About</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Contact</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<div class="col-lg-6 col-sm-6 col-md-6">
+<div class="single-widget">
+<h3>Address</h3>
+<ul class="address">
+<li>
+<i class="fa fa-map-marker"></i>
+HHbuilding,Surat,Gujarat.
+</li>
+<li>
+<i class="fa fa-envelope"></i>
+<p style="color:#ffffff">
+<i class="fa fa-envelope"></i>
+helpinghands@gmail.com</p>
+</li>
+<li>
+<i class="fa fa-envelope"></i>
+<p style="color:#ffffff">
+<i class="fa fa-envelope"></i>
+HH@gmail.com</p>
+</li>
+<li>
+<p style="color:#ffffff">
+<i class="fa fa-phone"></i>
++91-9876543210</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="go-top">
+<i class="fa fa-angle-double-up"></i>
+<i class="fa fa-angle-double-up"></i>
+</div>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{%static  'home/js/jquery.min.js' %}"></script>
+
+<script src="{%static  'home/js/bootstrap.bundle.min.js'  %}"></script>
+
+<script src="{%static  'home/js/meanmenu.min.js'  %}"></script>
+
+<script src="{%static  'home/js/wow.min.js'  %}"></script>
+
+<script src="{%static  'home/js/owl.carousel.min.js'  %}"></script>
+
+<script src="{%static  'home/js/imagelightbox.min.js'  %}"></script>
+
+<script src="{%static  'home/js/appear.min.js'  %}"></script>
+
+<script src="{%static  'home/js/odometer.min.js'  %}"></script>
+
+<script src="{%static  'home/js/mixitup.min.js'  %}"></script>
+
+<script src="{%static  'home/js/form-validator.min.js'  %}"></script>
+
+<script src="{%static  'home/js/contact-form-script.js'  %}"></script>
+
+<script src="{%static  'home/js/ajaxchimp.min.js'  %}"></script>
+
+<script src="{%static  'home/js/custom.js'  %}"></script>
+</body>
+
+</html>
