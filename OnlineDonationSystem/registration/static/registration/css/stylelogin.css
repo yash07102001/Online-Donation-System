@@ -14,13 +14,12 @@ border-radius: 1.5em;
 box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 }
-
-a#createAcc {
+a .centreTxt{
     text-align:center;
-    margin: 120px;
-    margin-top: 20px;
+    margin:0px 5em;
     color: black;
 }
+
 
 .fHead{
 padding-top: 40px;

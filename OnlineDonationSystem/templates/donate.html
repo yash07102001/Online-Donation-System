@@ -72,6 +72,7 @@
 </li>
 </ul>
 </div>
+</div>
 </nav>
 </div>
 </div>
@@ -97,80 +98,83 @@ Home
 </div>
 </div>
 </div>
-
-<div class="donfor">
-<label id="dfor" for="donation">You are Donating For :&nbsp&nbsp;</label>
-<select autofocus required id="donation" name="Select whom to Donate">
-  <option checked value="default">Select whom to Donate</option>
-  <option value="Covid fund">Covid Relief Fund</option>
-  <option value="School For Children">School For Children</option>
-  <option value="Old age Home">Old age Home</option>
-  <option value="Donate Helping Hands">Donate Helping Hands</option>
-
-</select>
-</div>
-
-<section class="donate-area ptb-100">
-<div class="container">
-<div class="row">
-<div class="col-lg-6">
-<div class="donate-img"></div>
-</div>
-<div class="col-lg-6">
-<div class="donates-wraps">
-<div class="payment-method">
-<h3>Select Payment Method</h3>
-<br>
-<p>
-<input type="radio" id="UPI" checked name="radio-group" default>
-<label for="UPI">UPI</label>
-</p>
-<br>
-</div>
-<div class="contact-form">
-<form id="contactForm">
-<div class="row">
-<div class="col-lg-12">
-<div class="form-group">
-<input type="text" name="name" id="first-name" class="form-control" required data-error="Please enter your name" placeholder="First Name">
-</div>
-</div>
-<div class="col-lg-12">
-<div class="form-group">
-<input type="text" name="name" id="last-name" class="form-control" required data-error="Please enter your name" placeholder="Last Name">
-</div>
-</div>
-<div class="col-lg-12">
-<div class="form-group">
-<input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
-</div>
-</div>
-<div class="col-lg-12">
-<div class="form-group">
-<input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
-</div>
-</div>
-<div class="col-lg-12">
-<div class="form-group">
-<input type="text" name="Upi address" id="phone_number" required data-error="Please enter your Upi address" class="form-control" placeholder="UPI Address">
-</div>
-</div>
-<div class="col-lg-12">
-<div class="form-group">
-<input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="$100.00">
-</div>
-</div>
-<div class="col-lg-12">
-<button type="submit" class="default-btn">Donate Now</button>
-</div>
-</div>
+<!--id="contactForm"-->
+<form  action="mydonation" method="post">{% csrf_token %}
+    <section class="donate-area ptb-100">
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-6">
+        <div class="donate-img"></div>
+        </div>
+        <div class="col-lg-6">
+        <div class="donates-wraps">
+        <div class="payment-method">
+    <!--    -->
+        <div class="donfor">
+            <h3 id="dfor" for="donation">You are Donating For :&nbsp&nbsp;</h3><br>
+            <select autofocus required id="donation" name="ActivityName">
+                <option checked value="default">Select whom to Donate</option>
+                <option value="Covid fund">Covid Relief Fund</option>
+                <option value="School For Children">School For Children</option>
+                <option value="Old age Home">Old age Home</option>
+            <option value="Donate Helping Hands">Donate Helping Hands</option>
+            </select>
+        </div>
+        <br>
+        <h3>Select Payment Method</h3>
+        <br>
+        <p>
+        <input type="radio" id="UPI"  name="paymentMethod" value="UPI" checked>
+        <label for="UPI">UPI</label>
+        </p>
+        <br>
+        </div>
+        <div class="contact-form">
+        <!---->
+        <div class="row">
+        <div class="col-lg-12">
+        <div class="form-group">
+        <input type="text" name="fname" id="first-name" class="form-control" required data-error="Please enter your name" placeholder="First Name">
+        </div>
+        </div>
+        <div class="col-lg-12">
+        <div class="form-group">
+        <input type="text" name="lname" id="last-name" class="form-control" required data-error="Please enter your name" placeholder="Last Name">
+        </div>
+        </div>
+        <div class="col-lg-12">
+        <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
+        </div>
+        </div>
+        <div class="col-lg-12">
+        <div class="form-group">
+        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
+        </div>
+        </div>
+        <div class="col-lg-12">
+        <div class="form-group">
+        <input type="text" name="Upi address" id="phone_number" required data-error="Please enter your Upi address" class="form-control" placeholder="UPI Address">
+        </div>
+        </div>
+        <div class="col-lg-12">
+        <div class="form-group">
+        <input type="text" name="amt" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="$100.00">
+        </div>
+        </div>
+        <div class="col-lg-12">
+        <button type="submit" class="default-btn">Donate Now</button>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
 </form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+
+
 
 
 <section class="footer-top-area ptb-100-70">
