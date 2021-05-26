@@ -42,7 +42,7 @@ def mydonation(request):
             'user': user,
             'd': d,
         }
-        return render(request, 'mydonation.html', context=context)
+        return render(request, 'Recent-Donations.html', context=context)
     else:
         user =request.user
         d=Donation.objects.filter(userId=user.id)
@@ -50,4 +50,4 @@ def mydonation(request):
             'user': user,
             'd':d,
         }
-        return render(request, 'mydonation.html', context=context)
+        return render(request, 'Recent-Donations.html', context=context)

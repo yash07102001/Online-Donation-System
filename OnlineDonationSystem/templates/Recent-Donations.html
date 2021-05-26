@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% load static %}
+<link rel="stylesheet" href="{% static  'home/css/bootstrap.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/owl.theme.default.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/owl.carousel.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/animate.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/flaticon.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/font-awesome.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/imagelightbox.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/meanmenu.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/odometer.min.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/style.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/donations.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/responsive.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/button.css' %}">
+
+<link rel="stylesheet" href="{% static  'home/css/style.css' %}">
+
+<link rel="icon" type="image/png" href="{% static  'home/img/favicon.png' %}">
+
+<title>Helping hand - Charity & Donations</title>
+</head>
+<body>
+
+<div class="preloader">
+<div class="spinner">
+<div class="double-bounce1"></div>
+<div class="double-bounce2"></div>
+</div>
+</div>
+
+<section class="top">
+<div class="navbar-area">
+
+<div class="mobile-nav">
+<a href="index.html" class="logo">
+<img src="{% static  'home/img/nivo-logo.png' %}" alt="Nivo Logo">
+</a>
+</div>
+
+<div class="nivo-nav-one">
+<div class="main-nav">
+<nav class="navbar navbar-expand-md navbar-light">
+<div class="container">
+<a class="navbar-brand" href="index.html">
+<img src="{% static  'home/img/helping-hands.png' %}" alt="Helping-Hands Logo">
+</a>
+<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+<ul class="navbar-nav m-auto">
+<li class="nav-item">
+<a href="/" class="nav-link">Home</a>
+</li>
+<li class="nav-item">
+<a href="about" class="nav-link">About</a>
+</li>
+
+<li class="nav-item">
+<a href="contact" class="nav-link">Contact us</a>
+</li>
+
+<li class="nav-item">
+<a href="donate" class="nav-link">Donate</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="page-title-area item-bg-1">
+<div class="container">
+<div class="page-title-content">
+<h2>Donation History</h2>
+<ul>
+<li>
+<a href="/">
+Home
+<i class="fa fa-chevron-right"></i>
+</a>
+</li>
+<li>Your Donations</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div style="background-color:#FFFFCC ">
+<br>
+<tt><h1 style="text-align:center; colour:#303F9F;">Your Donations History  </h1></tt><br>
+<div class="table-responsive">
+
+    {% if user.is_authenticated %}
+    <table class="table table-bordered">
+    <thead>
+      <tr style="background-color:#F39C12;text-align:center; height:35px; ">
+        <th>TRANSACTION_ID</th>
+        <th>DONATED_FOR</th>
+		<th>Date</th>
+        <th>Amount</th>
+        <th>Payment Method</th>
+      </tr>
+    </thead>
+     <tbody>
+
+     {% for ob in d %}
+     <tr class="actual-donations">
+        <th>{{ob.id}}</th>
+        <th>{{ob.activity}}</th>
+		<th>{{ob.date}}</th>
+        <th>{{ob.amount}}</th>
+        <th>{{ob.paymentmethod}}</th>
+      </tr>
+     {% endfor %}
+<!--      <tr class="actual-donations">-->
+<!--        <th>2002</th>-->
+<!--        <th>Child care</th>-->
+<!--		<th>26-05-2021</th>-->
+<!--        <th>10000</th>-->
+<!--      </tr>-->
+<!--          -->
+<!--    <tr class="actual-donations">-->
+<!--        <th>2003</th>-->
+<!--        <th>School for children</th>-->
+<!--		<th>26-05-2021</th>-->
+<!--        <th>100000</th>-->
+<!--      </tr>-->
+
+	</tbody>
+  </table>
+    {% else %}
+    <h1>Please <a href="registration/login"> Login</a></h1>
+    {% endif %}
+</div>
+</div>
+
+
+<section class="footer-top-area ptb-100-70">
+<div class="container">
+<div class="section-title">
+<h1 style = "color:#ffffff">Helping Hands</h1></nr></br></br>
+<div class="row">
+<div class="col-lg-6 col-sm-6 col-md-6" >
+<div class="single-widget">
+<div style = "width : auto; height: auto; background-color:#ffffff;">
+<a href="index.html">
+<img src="{%static  'home/img/helping-hands.png'  %}" alt="">
+ </a>
+ </div><br>
+<p> Helping Hands is a charity service to help needy Humans and their families in their bad time by providing simple interface for Donations.</p>
+<ul class="social-icon">
+<li>
+<a href="#">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="fa fa-pinterest-p"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!--<div class="col-lg-2 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<h3>Fundraised More</h3>-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="#">Medical</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Memorial</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Emergency</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Education</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Charity</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Organization</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-2 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<h3>Resources</h3>-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="#">Help Center</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Blog</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Press Center</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Careers</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">About</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Contact</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<div class="col-lg-6 col-sm-6 col-md-6">
+<div class="single-widget">
+<h3>Address</h3>
+<ul class="address">
+<li>
+<i class="fa fa-map-marker"></i>
+HHbuilding,Surat,Gujarat.
+</li>
+<li>
+<i class="fa fa-envelope"></i>
+<p style="color:#ffffff">
+<i class="fa fa-envelope"></i>
+helpinghands@gmail.com</p>
+</li>
+<li>
+<i class="fa fa-envelope"></i>
+<p style="color:#ffffff">
+<i class="fa fa-envelope"></i>
+HH@gmail.com</p>
+</li>
+<li>
+<p style="color:#ffffff">
+<i class="fa fa-phone"></i>
++91-9876543210</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--<section class="footer-top-area ptb-100-70">-->
+<!--<div class="container">-->
+<!--<div class="section-title">-->
+<!--<h1 style = "color:#ffffff">Helping Hands</h1></nr></br></br>-->
+<!--<div class="row">-->
+<!--<div class="col-lg-4 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<div style = "width : auto; height: auto; background-color:#ffffff;">-->
+<!--<a href="index.html">-->
+<!--<img src="{% static  'home/img/helping-hands.png' %}" alt="">-->
+<!-- </a>-->
+<!-- </div><br>-->
+<!--<p> Helping Hands is a charity service to help needy Humans and their families in their bad time by providing simple interface for Donations.</p>-->
+<!--<ul class="social-icon">-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-facebook"></i>-->
+<!--</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-twitter"></i>-->
+<!--</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-linkedin"></i>-->
+<!--</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-pinterest-p"></i>-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-2 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<h3>Fundraised More</h3>-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="#">Medical</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Memorial</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Emergency</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Education</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Charity</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Organization</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-2 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<h3>Resources</h3>-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="#">Help Center</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Blog</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Press Center</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Careers</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">About</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Contact</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-lg-4 col-sm-6 col-md-6">-->
+<!--<div class="single-widget">-->
+<!--<h3>Address</h3>-->
+<!--<ul class="address">-->
+<!--<li>-->
+<!--<i class="fa fa-map-marker"></i>-->
+<!--HHbuilding,Surat,Gujarat.-->
+<!--</li>-->
+<!--<li>-->
+<!--<i class="fa fa-envelope"></i>-->
+<!--<p style="color:#ffffff">-->
+<!--<i class="fa fa-envelope"></i>-->
+<!--helpinghands@gmail.com</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<i class="fa fa-envelope"></i>-->
+<!--<p style="color:#ffffff">-->
+<!--<i class="fa fa-envelope"></i>-->
+<!--HH@gmail.com</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p style="color:#ffffff">-->
+<!--<i class="fa fa-phone"></i>-->
+<!--+91-9876543210</p>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+
+<div class="go-top">
+<i class="fa fa-angle-double-up"></i>
+<i class="fa fa-angle-double-up"></i>
+</div>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static  'home/js/jquery.min.js' %}"></script>
+
+<script src="{% static  'home/js/bootstrap.bundle.min.js' %}"></script>
+
+<script src="{% static  'home/js/meanmenu.min.js' %}"></script>
+
+<script src="{% static  'home/js/wow.min.js' %}"></script>
+
+<script src="{% static  'home/js/owl.carousel.min.js' %}"></script>
+
+<script src="{% static  'home/js/imagelightbox.min.js' %}"></script>
+
+<script src="{% static  'home/js/appear.min.js' %}"></script>
+
+<script src="{% static  'home/js/odometer.min.js' %}"></script>
+
+<script src="{% static  'home/js/mixitup.min.js' %}"></script>
+
+<script src="{% static  'home/js/form-validator.min.js' %}"></script>
+
+<script src="{% static  'home/js/contact-form-script.js' %}"></script>
+
+<script src="{% static  'home/js/ajaxchimp.min.js' %}"></script>
+
+<script src="{% static  'home/js/custom.js' %}"></script>
+
+</body>
+</html>
